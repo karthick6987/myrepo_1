@@ -74,11 +74,3 @@ output "public_ip" {
 output "VM_names" {
   value = values(azurerm_windows_virtual_machine.AppVM_rb)[*].name
 }
-
-variable "tags_network_security_group" {
-    type = object({opco = string,rule=number})
-  default = {  
-  ruleID = 6987
-  opco= "karthick"
-  }
-}
